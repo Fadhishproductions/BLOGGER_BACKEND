@@ -8,7 +8,8 @@ router.get('/my-blogs',protect,getMyBlogs)
 router.post('/create',protect,createBlog);
 router.get('/',getAllBlogs);
 router.get('/:id', getBlogById);
-router.put('/:id',protect,editBlog);
-router.delete('/delete/:id',protect,deleteBlog)
+router.route('/:id').put(protect,editBlog).delete(protect,deleteBlog)
+// router.put('/:id',protect,editBlog);
+// router.delete('/:id',protect,deleteBlog)
 
 module.exports = router

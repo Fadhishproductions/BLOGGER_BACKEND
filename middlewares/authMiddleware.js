@@ -11,4 +11,20 @@ exports.protect = (req, res, next) => {
     next();
   });
 };
+
+
+
+
+
+
+
+
+
+
+
+const demoMiddelware= (req,res,next)=>{
+
+  console.log(req.params)
+  next()
+}
  

@@ -7,7 +7,7 @@ exports.createBlog = asyncHandler(async (req,res)=>{
     const {title,image,content} = req.body;
     console.log(req.body)
     const author = req.user.userId; 
-
+ 
     if (!title || !image || !content) {
         res.status(400);
         throw new Error("All fields are required.");
